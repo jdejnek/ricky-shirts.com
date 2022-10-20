@@ -26,6 +26,11 @@
       .nav-link {
         padding: 10px 15px;
         cursor: pointer;
+        color: white;
+
+        &:hover {
+          color: #FFD700;
+        }
       }
     }
   }

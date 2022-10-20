@@ -5,6 +5,7 @@ import Button from '../button/button.component';
 import './sign-in-form.styles.scss';
 
 
+
 const defaultFormFields = {
     email: '',
     password: '',
@@ -21,16 +22,15 @@ const SignInForm = () => {
     };
 
     const SignInWithGoogle = async () => {
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await signInAuthUserWithEmailAndPassword(email, password);
-            console.log(response);
+            // Destructure user object from the response
+            const { user } = await signInAuthUserWithEmailAndPassword(email, password);
             resetFormFields();
         } catch (error) {
             switch (error.code) {
@@ -40,7 +40,8 @@ const SignInForm = () => {
                     break;
                 default: console.log(error);
             };
-    }};
+        }
+    };
 
 
     const handleChange = (event) => {

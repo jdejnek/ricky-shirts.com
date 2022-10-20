@@ -1,16 +1,18 @@
-import './item-card.styles.css'
+import './item-card.styles.scss'
 
-const ItemCard = ({ item }) => {
+const ItemCard = ({ product }) => {
 
-  const { imageUrl, name } = item;
+  const { imageUrl, name } = product;
 
   return (
+    <div className='card-container'>
     <div className="item-card">
       <img src={imageUrl} />
       <div className="item-info">
-        <h2>{name}</h2>
-        <p>Shop Now</p>
+        <span className='item-name'>{name}</span>
+        <span className='item-price'>FROM 899 DKK</span>
       </div>
+    </div>
     </div>
   )
 }
