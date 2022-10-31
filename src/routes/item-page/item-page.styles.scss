@@ -13,8 +13,9 @@
 
         .left-column {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
+            padding-right: 6rem;
 
             .carousel {
                 height: 100%;
@@ -23,6 +24,7 @@
                 img {
                     max-width: 40vw;
                     max-height: 70vh;
+                    border: 25px solid rgba(255, 255, 255, 0.9);
                 }
             }
         }
@@ -30,8 +32,10 @@
         .right-column {
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
+            align-items: flex-start;
+            padding-left: 8rem;
             flex-direction: column;
+            
         }
     }
 }

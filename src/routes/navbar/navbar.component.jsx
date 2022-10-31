@@ -32,6 +32,9 @@ const Navbar = () => {
                     <Link className='nav-link' to='artist'>
                         THE ARTIST
                     </Link>
+                    <Link className='nav-link' to='checkout'>
+                        CHECKOUT
+                    </Link>
                     {/* Render sign-in or sign-out depending on user context. */}
                     {
                         currentUser ? (
