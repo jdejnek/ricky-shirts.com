@@ -2,9 +2,16 @@ import './checkout-styles.scss';
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 import CheckoutItem from '../../components/checkout-item/checkout-item-component';
+import Button from '../../components/button/button.component';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutPage = () => {
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, cartTotal } = useContext(CartContext);
+    const navigate = useNavigate();
+
+    const goToOrder = () => {
+        navigate('/order-summary')
+    }
 
     return (
         <div className='checkout-container'>
@@ -16,7 +23,8 @@ const CheckoutPage = () => {
                     <CheckoutItem key={cartItem.id} cartItem={cartItem} />
                 ))}
             </div>
-            <span className='total'>Total: 0</span>
+            <span className='total'>TOTAL: <span className='total-count'>{cartTotal} DKK</span></span>
+            <Button onClick={goToOrder}>Place your order</Button>
         </div>
         </div>
     )

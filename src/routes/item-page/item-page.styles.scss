@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 .item-page-container {
     height: 100%;
     width: 100%;
@@ -35,7 +37,21 @@
             align-items: flex-start;
             padding-left: 8rem;
             flex-direction: column;
+
+            .product-name {
+                border-bottom: 1px solid white;
+                padding-bottom: 0.5rem;
+            }
             
+            .description {
+                font-family: 'Caveat', cursive;
+                font-size: 2rem;
+            }
+
+            a {
+                color: #FFD700;
+                text-decoration: solid;
+            }
         }
     }
 }

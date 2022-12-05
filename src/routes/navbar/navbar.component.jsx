@@ -2,7 +2,6 @@ import { Fragment, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import CartIcon from '../../components/cart-icon/cart-icon-component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown-component';
-import { ReactComponent as Logo } from '../../assets/logo.svg'
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
@@ -26,14 +25,8 @@ const Navbar = () => {
                     <Link className='nav-link' to='stickers'>
                         STICKERS
                     </Link>
-                    <Link className='nav-link' to='apparel'>
-                        APPAREL
-                    </Link>
                     <Link className='nav-link' to='artist'>
                         THE ARTIST
-                    </Link>
-                    <Link className='nav-link' to='checkout'>
-                        CHECKOUT
                     </Link>
                     {/* Render sign-in or sign-out depending on user context. */}
                     {

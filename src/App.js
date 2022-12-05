@@ -5,6 +5,7 @@ import Prints from './routes/prints/prints.component';
 import ItemPage from './routes/item-page/item-page.component';
 import CheckoutPage from './routes/checkout/checkout-component';
 import Stickers from './routes/stickers/stickers.component';
+import OrderSummary from './routes/order-summary/order.component'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='auth' element={<Authentication />} />
         <Route path=':id' element={<ItemPage />} />
         <Route path='checkout' element={<CheckoutPage />} />
+        <Route path='order-summary' element={<OrderSummary />} />
       </Route>
     </Routes>
   );

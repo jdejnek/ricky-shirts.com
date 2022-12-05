@@ -29,10 +29,11 @@ const ItemPage = () => {
                     </div>
                 </div>
                 <div className='right-column'>
-                    <h2>{product.name}</h2>
-                    <span>{product.price} DKK</span>
+                    <h2 className='product-name'>{product.name}</h2>
                     <span>Size: {product.size}</span>
-                    <p>Description</p>
+                    <p className='description'>{product.description}</p>
+                    <span>{product.price} DKK</span>
+                    <p>Handpainted acrylics on canvas by <a target='_blank' href='https://www.instagram.com/michaelricalitattoos/'>Michael Ricali</a>.</p>
                     <Button onClick={addProductToCart}>Add to Cart</Button>
                 </div>
             </div>
