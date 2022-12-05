@@ -1,10 +1,10 @@
 import { initializeApp } from 'firebase/app';
 import { onAuthStateChanged, signOut, getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth'
 import { getFirestore, doc, getDoc, setDoc, getDocs, collection, query, writeBatch } from 'firebase/firestore'
-import REACT_APP_FIREBASE_KEY from '../../.env'
+
 
 const firebaseConfig = {
-    apiKey: REACT_APP_FIREBASE_KEY,
+    apiKey: "AIzaSyAaLubG3EzbInDFbgy_jhpGsKvE7QqWMQI",
     authDomain: "ricky-shirts-db.firebaseapp.com",
     projectId: "ricky-shirts-db",
     storageBucket: "ricky-shirts-db.appspot.com",
