@@ -4,7 +4,7 @@ import { getFirestore, doc, getDoc, setDoc, getDocs, collection, query, writeBat
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAaLubG3EzbInDFbgy_jhpGsKvE7QqWMQI",
+    apiKey: FIREBASE_KEY,
     authDomain: "ricky-shirts-db.firebaseapp.com",
     projectId: "ricky-shirts-db",
     storageBucket: "ricky-shirts-db.appspot.com",
