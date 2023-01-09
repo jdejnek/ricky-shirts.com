@@ -25,9 +25,6 @@ const Navbar = () => {
                     <Link className='nav-link' to='stickers'>
                         STICKERS
                     </Link>
-                    <Link className='nav-link' to='artist'>
-                        THE ARTIST
-                    </Link>
                     {/* Render sign-in or sign-out depending on user context. */}
                     {
                         currentUser ? (

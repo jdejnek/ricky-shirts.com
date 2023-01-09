@@ -1,3 +1,6 @@
+body {
+    overflow: scroll;
+}
 
 .authentication-container {
     display: flex;
@@ -5,6 +8,7 @@
     width: 85rem;
     margin: 4rem auto;
     flex-wrap: wrap;
+    
 }
 
 @media screen and (max-width: 1650px) {
