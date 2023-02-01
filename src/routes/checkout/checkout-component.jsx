@@ -24,7 +24,7 @@ const CheckoutPage = () => {
                 ))}
             </div>
             <span className='total'>TOTAL: <span className='total-count'>{cartTotal} DKK</span></span>
-            <Button onClick={goToOrder}>Place your order</Button>
+            <Button>Place your order</Button>
         </div>
         </div>
     )
