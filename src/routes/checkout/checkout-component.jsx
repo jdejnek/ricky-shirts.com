@@ -9,6 +9,7 @@ const CheckoutPage = () => {
     const { cartItems, cartTotal } = useContext(CartContext);
     const navigate = useNavigate();
 
+    // Placing the order. Shutting down to fix css
     const goToOrder = () => {
         navigate('/order-summary')
     }

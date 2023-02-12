@@ -15,21 +15,28 @@ const defaultFormFields = {
 const SignUpForm = () => {
 
     const [formFields, setFormFields] = useState(defaultFormFields);
+    // Destructure fields for later use
     const { displayName, email, password, repeatPassword } = formFields;
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
 
+    // Create user doc in Firestore on submit
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        // Check if passwords match
         if (password !== repeatPassword) {
             alert('Passwords do not match.');
             return;
         }
         try {
+            // Get the auth object and destructure user data from it
             const { user } = await createAuthUserWithEmailAndPassword(email, password);
+            // Set the doc to Firestore, pass the displayName to additonalInformation argument
             await createUserDocumentFromAuth(user, { displayName });
+            // Clear the form fields
             resetFormFields();
 
         } catch (error) {
@@ -42,6 +49,7 @@ const SignUpForm = () => {
         }
     }
 
+    // Update formFields state value based on user input
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormFields({ ...formFields, [name]: value });

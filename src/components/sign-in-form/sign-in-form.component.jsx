@@ -17,19 +17,22 @@ const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { email, password } = formFields;
 
+    // Reset form
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     };
 
+    // Get google sign in method from Firebase utils
     const SignInWithGoogle = async () => {
         await signInWithGooglePopup();
     };
 
+    // Login with email and password
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            // Destructure user object from the response
+            // Destructure user object from the response and pass email and password to the sign in method
             const { user } = await signInAuthUserWithEmailAndPassword(email, password);
             resetFormFields();
         } catch (error) {
@@ -43,7 +46,7 @@ const SignInForm = () => {
         }
     };
 
-
+    // Pass user input to formFields state
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormFields({ ...formFields, [name]: value });
